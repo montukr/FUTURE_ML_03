@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Customer Support Chatbot</title>
+    </head>
+    <body style="font-family: Arial">
+        <h2>Customer Support Chatbot</h2>
+        <form method="POST">
+            <label>Type your message:</label><br />
+            <input type="text" name="user_input" size="50" autofocus required />
+            <button type="submit">Send</button>
+        </form>
+        {% if user_input %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>Bot:</strong> {{ bot_reply }}</p>
+        {% endif %}
+    </body>
+</html>
